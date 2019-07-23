@@ -1,6 +1,6 @@
 const mongoose =require('mongoose');
 const dbConfig=require('../utils/configs/dbConfig');
-mongoose.connect(dbConfig.dbConfigUrl,(err)=> {
+mongoose.connect(dbConfig.dbConfigUrl,{ useNewUrlParser: true },(err)=> {
     if(err) {
         console.log("Error while connecting to database ");
     }
